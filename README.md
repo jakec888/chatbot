@@ -15,3 +15,5 @@ to learn basic ml.
 Extract Data
 Transform Data
 Load Data
+Define Model
+Define Training Procedure
