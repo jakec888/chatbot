@@ -1,8 +1,10 @@
 # Chatbot
 
-### Goal
+## <center>Walkthrough Update</center>
 
-to learn basic ml.
+<p align="center">
+<img src="Chatbot.gif" />
+</p>
 
 ## Tech Stack
 
