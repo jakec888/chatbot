@@ -4,7 +4,6 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 import torch
-# from torch.jit import script, trace
 import torch.nn as nn
 from torch import optim
 import torch.nn.functional as F
@@ -16,7 +15,6 @@ import unicodedata
 import codecs
 from io import open
 import itertools
-# import math
 
 
 USE_CUDA = torch.cuda.is_available()
@@ -325,7 +323,8 @@ def outputVar(l, voc):
     max_target_len = max([len(indexes) for indexes in indexes_batch])
     padList = zeroPadding(indexes_batch)
     mask = binaryMatrix(padList)
-    mask = torch.ByteTensor(mask)
+    # mask = torch.ByteTensor(mask)
+    mask = torch.BoolTensor(mask)
     padVar = torch.LongTensor(padList)
     return padVar, mask, max_target_len
 
@@ -581,6 +580,7 @@ def trainIters(model_name, voc, pairs, encoder, decoder, encoder_optimizer, deco
         # Run a training iteration with batch
         loss = train(input_variable, lengths, target_variable, mask, max_target_len, encoder,
                      decoder, embedding, encoder_optimizer, decoder_optimizer, batch_size, clip)
+
         print_loss += loss
 
         # Print progress

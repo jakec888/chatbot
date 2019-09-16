@@ -20,3 +20,11 @@ Define Model
 Define Training Procedure
 
 Evaluate Data
+
+#### Issues
+
+- torch.ByteTensor is depricated; switch to torch.BoolTensor
+
+#### To Do:
+
+- Add A Estimated Time To Complete [ETC](https://discuss.pytorch.org/t/estimated-time-of-an-epoch/14988/7)
