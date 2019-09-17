@@ -3,7 +3,7 @@
 ## <center>Walkthrough Update</center>
 
 <p align="center">
-<img src="Chatbot.gif" />
+<img src="chatbot/Chatbot.gif" />
 </p>
 
 ## Tech Stack
